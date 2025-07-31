@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Hak Pilih</title>
+  <style>
+  <style>
+        /* Gaya untuk body */
+        body {
+            font-family: 'Roboto'; /* Mengatur font */
+            background-color: #f0f2f5; /* Warna latar belakang */
+            display: flex; /* Menggunakan flexbox untuk tata letak */
+            justify-content: center; /* Memusatkan konten secara horizontal */
+            align-items: center; /* Memusatkan konten secara vertikal */
+            min-height: 100vh; /* Minimal tinggi layar */
+            margin: 0 ; /* Menghilangkan margin */
+        }
+        
+        /* Gaya untuk kontainer */
+        .container {
+            background: #fff; /* Warna latar belakang kontainer */
+            padding: 2rem; /* Ruang di dalam kontainer */
+            border-radius: 8px; /* Sudut yang membulat */
+            box-shadow: 0 0 100px rgba(0, 0, 0, 0.1); /* Bayangan */
+            width: 100%; /* Lebar penuh */
+            max-width: 400px; /* Lebar maksimum */
+        }
+
+        /* Gaya untuk judul */
+        h2 {
+            font-weight: 700; /* Ketebalan font */
+            text-align: center; /* Rata tengah */
+            margin-bottom: 1.5rem; /* Jarak bawah */
+        }
+
+        /* Gaya untuk label */
+        label {
+            font-weight: 500; /* Ketebalan font */
+            margin-top: 1rem; /* Jarak atas */
+        }
+
+        /* Gaya untuk input angka */
+        input[type="number"] {
+            width: 100%; /* Lebar penuh */
+            padding: 0.75rem; /* Ruang di dalam input */
+            margin-top: 0.5rem; /* Jarak atas */
+            border-radius: 4px; /* Sudut yang membulat */
+            border: 1px solid #ccc; /* Border */
+            margin-bottom: 1rem; /* Jarak bawah */
+        }
+
+        /* Gaya untuk dropdown */
+        select {
+            width: 100%; /* Lebar penuh */
+            padding: 0.75rem; /* Ruang di dalam dropdown */
+            margin-bottom: 1rem; /* Jarak bawah */
+            border-radius: 4px; /* Sudut yang membulat */
+            border: 1px solid #ccc; /* Border */
+        }
+
+        /* Gaya untuk tombol */
+        button {
+            width: 48%; /* Lebar tombol */
+            padding: 0.75rem; /* Ruang di dalam tombol */
+            background-color: #1999af; /* Warna latar belakang tombol */
+            color: #fff; /* Warna teks tombol */
+            border: none; /* Tanpa border */
+            border-radius: 4px; /* Sudut yang membulat */
+            font-weight: 700; /* Ketebalan font */
+            cursor: pointer; /* Kursor berubah saat hover */
+            margin-right: 4%; /* Jarak kanan */
+            transition: background-color 0.3s ease; /* Efek transisi pada hover */
+        }
+
+        /* Gaya untuk tombol terakhir (Clear) */
+
+
+        /* Gaya saat tombol dihover */
+        .satu:hover {
+            background-color: #0056b3; /* Warna saat hover */
+        }
+         .dua {
+            background-color: #c40a0a; /* Warna saat hover */
+        }
+        .dua:hover {
+            background-color: #1f1c1c; /* Warna saat hover */
+        }
+
+        /* Gaya untuk hasil operasi */
+        #hasil {
+            font-weight: bold; /* Ketebalan font */
+            margin-top: 1rem; /* Jarak atas */
+            display: block; /* Menampilkan sebagai blok */
+            text-align: center; /* Rata tengah */
+        }
+    </style></style>
+</head>
+<body>
+    <h2>Form Cek Hak Pilih</h2>
+    
+    <!-- Inputan umur -->
+    <label for="umur">Umur:</label>
+    <input type="number" id="umur" name="umur" required>
+    
+    <!-- Inputan status dengan select option -->
+    <label for="status">Status:</label>
+    <select id="status" name="status">
+        <option value="belum">Belum Menikah</option>
+        <option value="menikah">Menikah</option>
+    </select>
+    
+    <!-- Tombol untuk cek hak pilih -->
+    <button onclick="cekHakPilih()">Cek Hak Pilih</button>
+    
+    <script>
+        // Nama: [Nama Anda]
+        // Kelas: [Kelas Anda]
+        
+        function cekHakPilih() {
+            // Mengambil nilai input umur
+            var umur = document.getElementById("umur").value;
+            
+            // Mengambil nilai input status
+            var status = document.getElementById("status").value;
+            
+            // Kondisi pengecekan menggunakan operator OR (||)
+            if (umur > 17 || status === "menikah") {
+                // Jika umur lebih dari 17 atau status menikah, tampilkan pesan hak pilih
+                alert("Anda memiliki Hak Pilih");
+            } else {
+                // Jika tidak memenuhi syarat
+                alert("Anda tidak memiliki Hak Pilih");
+            }
+        }
+    </script>
+</body>
+</html>

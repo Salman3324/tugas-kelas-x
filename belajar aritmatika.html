@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>HTML Forms</h2>
+  <label for="bil1">Bilangan 1:</label><br />
+    <input type="number" id="bil1" name="bil1" /><br />
+    <label for="bil2">Bilangan 2:</label><br />
+    <input type="number" id="bil2" name="bil2" /><br />
+    Hasil Penjumlahan = <span id="hasil"></span><br />
+    <button onclick="hitung()">Hitung</button>
+
+    <script>
+      function hitung() {
+        var bilangan1 = parseFloat(document.getElementById("bil1").value);
+        var bilangan2 = parseFloat(document.getElementById("bil2").value);
+        var hasil = bilangan1 - bilangan2;
+        document.getElementById("hasil").innerHTML = hasil;
+        alert(
+          "Hasil penjumlahan " + bilangan1 + " - " + bilangan2 + " = " + hasil
+        );
+      }
+    </script>
+  </body>
+</html>

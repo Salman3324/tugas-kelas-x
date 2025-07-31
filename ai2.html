@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <a href="ai.html">ai.html</a>
+      <a href="p.html">p.html</a>
+    <a href="p2.html">p2.html</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Perkalian</title>
+    <script>
+        function hitungPerkalian() {
+            // Mengambil nilai dari input
+            var angka1 = parseFloat(document.getElementById('angka1').value);
+            var angka2 = parseFloat(document.getElementById('angka2').value);
+            
+            // Menghitung hasil perkalian
+            var hasil = angka1 * angka2;
+            
+            // Menampilkan hasil
+            document.getElementById('hasil').innerText = "Hasil perkalian: " + hasil;
+        }
+    </script>
+</head>
+<body>
+    <h1>Perkalian</h1>
+    <form onsubmit="event.preventDefault(); hitungPerkalian();">
+        <label for="angka1">Angka Pertama:</label>
+        <input type="number" id="angka1" required>
+        <br><br>
+        <label for="angka2">Angka Kedua:</label>
+        <input type="number" id="angka2" required>
+        <br><br>
+        <input type="submit" value="Hitung">
+    </form>
+    <p id="hasil"></p>
+</body>
+</html>

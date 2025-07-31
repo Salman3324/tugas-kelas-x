@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KELOLA USER</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-right: 5px;
+      padding: 8px 12px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+    thead {
+      background-color: #f2f2f2;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kelola User</h1>
+  <form>
+    <label for="nama">User Name</label><br>
+    <input type="text" id="nama" name="nama"><br>
+
+    <label for="no">Nomor Telepon</label><br>
+    <input type="text" id="no" name="no"><br>
+
+    <label for="alamat">Alamat</label><br>
+    <input type="text" id="alamat" name="alamat"><br>
+
+    <label for="pw">Password</label><br>
+    <input type="password" id="pw" name="pw"><br><br>
+
+    <button type="button">Edit</button>
+    <button type="button">Hapus</button>
+    <button type="button">Tambah</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Nomor Telepon</th>
+        <th>Alamat</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>User1</td>
+        <td>123456789</td>
+        <td>Jl. Contoh No.1</td>
+        <td>******</td>
+      </tr>
+      <tr>
+        <td>User2</td>
+        <td>987654321</td>
+        <td>Jl. Contoh No.2</td>
+        <td>******</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

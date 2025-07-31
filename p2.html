@@ -1,0 +1,35 @@
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>kalkulator</title>
+    <a href="ai.html">ai.html</a>
+    <a href="ai2.html">ai2.html</a>
+    <a href="p.html">p.html</a>
+   <script>
+        function hitungPenjumlahan() {
+            // Mengambil nilai dari input
+            var angka1 = parseFloat(document.getElementById('angka1').value);
+            var angka2 = parseFloat(document.getElementById('angka2').value);
+            
+            // Menghitung hasil penjumlahan
+            var hasil = angka1 / angka2;
+            
+            // Menampilkan hasil
+            document.getElementById('hasil').innerText = "Hasil penjumlahan: " + hasil;
+        }
+    </script>
+</head>
+<body>
+  <h1>pembagian</h1>
+  <form onsubmit="event.preventDefault(); hitungPenjumlahan();">
+        <label for="angka1">Angka Pertama:</label>
+        <input type="number" id="angka1" required>
+        <br><br>
+        <label for="angka2">Angka Kedua:</label>
+        <input type="number" id="angka2" required>
+        <br><br>
+        <input type="submit" value="Hitung">
+    </form>
+    <p id="hasil"></p>
+</body>
+</html>
